@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>技术支持 — ZT SVN</title>
+  <meta name="description" content="ZT SVN 使用帮助与技术支持。了解工作副本检出、登录认证、历史导出、分支合并及文本冲突处理，并联系开发者反馈问题。">
+  <link rel="canonical" href="https://wo-zt.github.io/ztsvn-support/support.html">
+  <link rel="icon" href="/ztsvn-support/icon.png"><link rel="stylesheet" href="/ztsvn-support/styles.css">
+</head>
+<body>
+  <header class="nav wrap"><a class="brand" href="/ztsvn-support/"><img src="/ztsvn-support/icon.png" width="36" height="36" alt="">ZT SVN</a><nav aria-label="主导航"><a href="/ztsvn-support/">产品介绍</a><a class="active" href="/ztsvn-support/support.html" aria-current="page">技术支持</a></nav></header>
+  <main class="support wrap">
+    <p class="eyebrow">ZT SVN / SUPPORT</p><h1>需要帮助？<br><span>从这里开始。</span></h1><p class="lead">查看常见问题，或把遇到的情况告诉我们。</p>
+    <section id="contact" class="contact-card" aria-labelledby="contact-title"><div><p class="eyebrow">联系开发者</p><h2 id="contact-title">问题反馈与功能建议</h2><p>技术支持邮箱：<a class="email" href="mailto:3193152800@qq.com?subject=ZT%20SVN%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">3193152800@qq.com</a></p><p class="small">点击邮箱可打开邮件应用；也可复制地址，使用你常用的邮箱发送反馈。</p></div><a class="button primary" href="mailto:3193152800@qq.com?subject=ZT%20SVN%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">发送支持邮件 <span aria-hidden="true">↗</span></a></section>
+    <section class="support-layout"><div><p class="eyebrow">使用帮助</p><h2>常见问题</h2><p class="body-copy">运行要求：macOS 26.0 或更高版本，配备 Apple Silicon 芯片的 Mac。</p></div><div class="faq">
+      <details open><summary>需要单独安装 SVN 吗？</summary><div><p>ZT SVN 内置适用于 Apple Silicon 的 SVN 引擎，日常使用无需额外安装 SVN 命令行工具。仓库服务器的地址和访问权限仍需由你或所在团队提供。</p></div></details>
+      <details><summary>如何添加已有项目或从仓库检出？</summary><div><p>通过“添加项目”选择已有的本地 SVN 工作副本；如果还没有本地文件，选择“从仓库检出”，填写仓库地址并选择保存位置。远程仓库需要网络可达，且账号具有相应权限。</p></div></details>
+      <details><summary>登录失败或反复提示钥匙串权限怎么办？</summary><div><p>先检查仓库地址、网络与账号权限。若 macOS 请求访问钥匙串，确认发起请求的是你正在使用的 ZT SVN。更换应用构建或签名后，系统可能重新询问访问权限。</p><p>可以在“设置 → 登录与安全”中清除 ZT SVN 保存的登录信息，再重新连接仓库。SSH 仓库使用本机的 SSH 密钥或代理配置。</p></div></details>
+      <details id="history"><summary>怎样导出历史版本？下载时间有限制吗？</summary><div><p>在“提交历史”中找到目标记录，点击该记录的“导出”。导出的是项目在指定版本的完整快照，不包含本地未提交修改、未跟踪文件、.svn 目录和外部引用。</p><p>检出和历史导出的实际下载没有固定的总时限，可手动停止。网络、仓库服务器或代理自身仍可能中断连接。</p></div></details>
+      <details><summary>分支合并会立即提交到仓库吗？</summary><div><p>不会。先更新并保持当前工作副本干净，选择合并来源并查看预览，再确认应用到本地。检查代码和合并产生的属性更改后，通过“提交”保存结果。</p></div></details>
+      <details><summary>出现冲突后怎样处理？</summary><div><p>选择冲突文件并打开“处理冲突”。对于支持的文本冲突，可以保留冲突前的本地版本、使用仓库传入版本，或在编辑器中修改后保存，再重新读取并标记已解决。</p><p>采用本地或传入版本会选择整份文件；请先检查内容。操作前会备份相关文件，不会自动提交。属性冲突和树冲突需要按界面说明，结合 SVN 工具或团队流程处理。</p></div></details>
+      <details><summary>如何切换浅色、深色或自动外观？</summary><div><p>打开“设置 → 通用 → 外观”，选择浅色、深色或自动。自动模式跟随 macOS 的系统外观，更改即时生效并保存。</p></div></details>
+    </div></section>
+    <section class="feedback"><h2>反馈时，请附上这些信息</h2><ul><li>ZT SVN 版本、macOS 版本和 Mac 芯片型号。</li><li>执行了什么操作，预期结果与实际结果分别是什么。</li><li>经过脱敏的错误信息、截图，以及可以重复问题的步骤。</li></ul><p class="small">请不要发送仓库密码、SSH 私钥、访问令牌或未获授权的项目代码。截图中的仓库地址、用户名和文件路径可先做遮盖。</p></section>
+  </main>
+  <footer class="wrap footer"><span>© 2026 ZT · ZT SVN</span><a href="/ztsvn-support/">返回产品介绍</a></footer>
+</body></html>
